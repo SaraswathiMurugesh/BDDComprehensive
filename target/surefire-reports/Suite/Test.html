@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 17 11:13:46 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>376 seconds (376080 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "selecting car in airport", "Optional[airport book]"</td>
+<td><div><pre>com.mindtree.exceptions.PageObjectException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;card ng-star-inserted&apos;]&quot;}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;JARVIS&apos;, ip: &apos;192.168.43.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\JARVIS\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59131}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 07e5c6607131debbc8daf03445b05142
+*** Element info: {Using=xpath, value=//div[@class=&apos;card ng-star-inserted&apos;]}
+	at com.mindtree.pageObject.airport.verify(airport.java:69)
+	at com.mindtree.stepDefinitions.airportStepDef.if_booking_detail_is_displayed_redirect_to_home_page(airportStepDef.java:83)
+	at ?.if booking detail is displayed redirect to home page(file:///C:/Users/JARVIS/eclipse-workspace-new/BDDAssessment/Features/airport.feature:15)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1829440934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1829440934'><pre>com.mindtree.exceptions.PageObjectException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;card ng-star-inserted&apos;]&quot;}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;JARVIS&apos;, ip: &apos;192.168.43.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\JARVIS\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59131}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 07e5c6607131debbc8daf03445b05142
+*** Element info: {Using=xpath, value=//div[@class=&apos;card ng-star-inserted&apos;]}
+	at com.mindtree.pageObject.airport.verify(airport.java:69)
+	at com.mindtree.stepDefinitions.airportStepDef.if_booking_detail_is_displayed_redirect_to_home_page(airportStepDef.java:83)
+	at ?.if booking detail is displayed redirect to home page(file:///C:/Users/JARVIS/eclipse-workspace-new/BDDAssessment/Features/airport.feature:15)
+</pre></div></td>
+<td>37</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "corporate car rental page", "Optional[Corporate car rental]"</td>
+<td></td>
+<td>79</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "selecting chen-trl in in onewaycab", "Optional[Oneway cab page]"</td>
+<td></td>
+<td>46</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validating With valid Email And Password", "Optional[Log in Validation]"</td>
+<td></td>
+<td>29</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "signout application", "Optional[signout app]"</td>
+<td></td>
+<td>32</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify download app", "Optional[download app]"</td>
+<td></td>
+<td>25</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "selecting car in local", "Optional[local book]"</td>
+<td></td>
+<td>30</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "selecting car in outstation", "Optional[Outstation book]"</td>
+<td></td>
+<td>35</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "selecting car in roundtrip", "Optional[roundtrip book]"</td>
+<td></td>
+<td>38</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+<tr>
+<td title='com.mindtree.runner.BDDTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.mindtree.runner.BDDTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate the page title", "Optional[Validate Page]"</td>
+<td></td>
+<td>17</td>
+<td>com.mindtree.runner.BDDTestRunner@3c153a1</td></tr>
+</table><p>
+</body>
+</html>
